@@ -13,7 +13,6 @@ class CookBook:
                 if not dish_name:
                     break
                 count_ingr = int(f.readline())
-                self.cook_book_dict[dish_name] = ingr_list
                 for _ in range(count_ingr):
                     ingr_dict = {}
                     splited_ingr = f.readline().strip().split(' | ')
@@ -44,7 +43,7 @@ class CookBook:
 def main():
     cb1 = CookBook('recipes.txt')
     print(cb1.cook_book_dict)
-    print(cb1.get_shop_list_by_dishes(['Омлет', 'Утка по-пекински'], 2))
+    print(cb1.get_shop_list_by_dishes(['Омлет', 'Фахитос'], 2))
 
 
 if __name__ == "__main__":
